@@ -95,7 +95,7 @@ class LogStash::Outputs::Kafka < LogStash::Outputs::Base
   # to allow other records to be sent so that the sends can be batched together.
   config :linger_ms, :validate => :number, :default => 0
   # The maximum size of a request
-  config :max_request_size, :validate => :number, :default => 1048576
+  config :max_request_size, :validate => :number, :default => 5242880
   # The key for the message
   config :message_key, :validate => :string
   # the timeout setting for initial metadata request to fetch topic metadata.
